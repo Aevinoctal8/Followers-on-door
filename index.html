@@ -308,17 +308,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Razorpay -->
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <!-- Custom JS -->
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
     function openRazorpay() {
+        const logoUrl = window.location.origin + '/images/logo.png';
+
         var options = {
             "key": "rzp_test_sbbb4ddMvdCZbz",
             "amount": 8900,
             "currency": "INR",
             "name": "Followers on Door",
             "description": "Purchase Followers Plan",
-            "image": "{{ asset('images/logo.png') }}",
+            "image": logoUrl,
             "handler": function (response) {
                 showAlert("success", "🎉 Thank you! Your submission is complete. We will review your payment, and you'll receive your 1000 followers/subscribers within 3 days.");
                 step1Form.reset();
