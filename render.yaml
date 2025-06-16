@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: followers-on-door
+    runtime: static
+    buildCommand: |
+      echo "Building static site..."
+    staticPublishPath: "./"
+    envVars:
+      - key: PUBLIC_URL
+        value: https://followers-ondoor.onrender.com
